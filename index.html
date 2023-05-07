@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>News homepage | davigzola</title>
 
@@ -12,7 +12,7 @@
 
   <style>
     .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution a { color: hsl(5, 85%, 63%); }
   </style>
 </head>
 <body>
@@ -20,19 +20,19 @@
     <div id="page-logo">
       <img src="./IMAGES/logo.svg">
     </div>
-    <div id="open-menu">
+    <button id="open-menu" class="hidden">
       <img src="./IMAGES/icon-menu.svg">
-    </div>
-    <div id="close-menu">
-      <img src="./IMAGES/icon-menu-close.svg">
-    </div>
-    <nav>
+    </button>
+    <button id="close-menu" class="hidden">
+      <img src="./images/icon-menu-close.svg">
+    </button>
+    <nav class="hidden">
       <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/">New</a></li>
-        <li><a href="/">Popular</a></li>
-        <li><a href="/">Trending</a></li>
-        <li><a href="/">Categories</a></li>
+        <li><a href="">Home</a></li>
+        <li><a href="">New</a></li>
+        <li><a href="">Popular</a></li>
+        <li><a href="">Trending</a></li>
+        <li><a href="">Categories</a></li>
       </ul>
     </nav>
   </header>
@@ -53,15 +53,15 @@
       <div id="blue-rect">
         <h2>New</h2>
         <article class="blue-rect-article">
-          <h3><a href="/">Hydrogen VS Electric Cars</a></h3>
+          <h3><a href="">Hydrogen VS Electric Cars</a></h3>
           <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
         </article>
         <article class="blue-rect-article">
-          <h3><a href="/">The Downsides of AI Artistry</a></h3>
+          <h3><a href="">The Downsides of AI Artistry</a></h3>
           <p>What are the possible adverse effects of on-demand AI image generation?</p>
         </article>
         <article class="blue-rect-article">
-          <h3><a href="/">Is VC Funding Drying Up?</a></h3>
+          <h3><a href="">Is VC Funding Drying Up?</a></h3>
           <p>Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
         </article>
       </div>
@@ -71,7 +71,7 @@
         <img src="./IMAGES/image-retro-pcs.jpg">
         <div>
           <span>01</span>
-          <h4>Reviving Retro PCs</h4>
+          <h4><a href="">Reviving Retro PCs</a></h4>
           <p>What happens when old PCs are given modern upgrades?</p>
         </div>
       </article>
@@ -79,7 +79,7 @@
         <img src="./IMAGES/image-top-laptops.jpg">
         <div>
           <span>02</span>
-          <h4>Top 10 Laptops of 2022</h4>
+          <h4><a href="">Top 10 Laptops of 2022</a></h4>
           <p>Our best picks for various needs and budgets.</p>
         </div>
       </article>
@@ -87,7 +87,7 @@
         <img src="./IMAGES/image-gaming-growth.jpg">
         <div>
           <span>03</span>
-          <h4>The Growth of Gaming</h4>
+          <h4><a href="">The Growth of Gaming</a></h4>
           <p>How the pandemic has sparked fresh opportunities.</p>
         </div>
       </article>
@@ -96,8 +96,9 @@
   <footer>
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Davi Gazola</a>.
+      Coded by <a href="https://github.com/davigzola">Davi Gazola</a>.
     </div>
   </footer>
+  <script src="./js/script.js"></script>
 </body>
 </html>

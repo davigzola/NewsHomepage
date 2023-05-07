@@ -36,6 +36,7 @@ header {
 
 header nav ul {
     display: flex;
+    flex-direction: row;
     gap: 60px;
 }
 
@@ -46,19 +47,11 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    color: hsl(35, 77%, 62%);
-}
-
-#open-menu {
-    display: none
-}
-
-#close-menu {
-    display: none
+    color: hsl(5, 85%, 63%);
 }
 
 main {
-    margin: 2rem 0;
+    margin: 4rem 0;
 }
 
 #first-section {
@@ -74,11 +67,6 @@ main {
     grid-area: a;
 }
 
-#blue-rect {
-    grid-area: b;
-    background-color: hsl(240, 100%, 5%);
-    box-sizing: border-box;
-}
 
 #first-section-text {
     display: flex;
@@ -113,6 +101,12 @@ main {
 
 #first-section-text button:hover {
     background-color: hsl(240, 100%, 5%) ;
+}
+
+#blue-rect {
+    grid-area: b;
+    background-color: hsl(240, 100%, 5%);
+    box-sizing: border-box;
 }
 
 #blue-rect h2 {
@@ -157,7 +151,8 @@ main {
 }
 
 #second-section {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     flex-wrap: wrap;
     gap: 1.5rem;
 }
@@ -186,6 +181,16 @@ main {
     margin: 1rem 0;
 }
 
+.second-section-article h4 a {
+    text-decoration: none;
+    color: hsl(240, 100%, 5%);
+    transition: 0.5s;
+}
+
+.second-section-article h4 a:hover {
+    color: hsl(5, 85%, 63%);
+}
+
 .second-section-article p {
     color: hsl(236, 13%, 42%);
 }
@@ -195,28 +200,49 @@ main {
 }
 
 @media screen and (max-width: 1444px) {
+    
     body {
         padding: 50px 2rem;
     }
 
     header nav {
-        display: none;
+        position: fixed;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        background-color: white;
+        padding: 30% 10% 0 3%;
+        height: 100%;
+        z-index: 9;
+        box-shadow: 0px 100px 100px black;
+    }
+
+
+    header nav ul {
+        display: flex;
+        flex-direction: column;
     }
 
     #open-menu {
         display: inline;
         position: absolute;
-        top: 4rem;
+        top: 4.25rem;
         right: 2.2rem;
-        z-index: 9;
+        z-index: 8;
+        background: none;
+        border: none;
+        cursor: pointer;
     }
 
     #close-menu {
-        display: inline;
-        position: absolute;
-        top: 3.5rem;
+        
+        position: fixed;
+        top: 3.75rem;
         right: 2.5rem;
         z-index: 10;
+        background: none;
+        border: none;
+        cursor: pointer;
     }
 
     #first-section {
@@ -244,5 +270,11 @@ main {
     #blue-rect h2 {
         margin-top: 2rem;
     }
-}
 
+    #second-section {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+}
