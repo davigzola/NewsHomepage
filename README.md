@@ -25,8 +25,8 @@ Users should be able to:
 
 ### Screenshot
 
-![News Homepage | Desktop Version](./design/screenshot/screenshot-desktop.png)
-![News Homepage | Mobile Version](./design/screenshot/screenshot-mobile.png)
+![News Homepage | Desktop Version](./design/screenshots/screenshot-desktop.png)
+![News Homepage | Mobile Version](./design/screenshots/screenshot-mobile.png)
 
 ## My process
 
